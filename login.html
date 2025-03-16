@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgb(234, 232, 232);">
+    <nav class="navbar">
+        <div class="brand-title">Food Donation</div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <div class="navbar-links" id="navbar-links">
+            <a href="#" onclick="showLoginForm()">Login</a><br>
+            <a href="#" onclick="showSignupForm()">Signup</a><br>
+            <a href="#" onclick="showForgotPasswordForm()">Forgot Password</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <div class="tabs">
+                <button id="login-tab" class="active" onclick="showLoginForm()">LOGIN</button>
+                <button id="signup-tab" onclick="showSignupForm()">SIGNUP</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="form active">
+                <h2>Login</h2>
+                <select id="userRole" required>
+                    <option value="donor">Donor</option>
+                    <option value="admin">Admin</option>
+                    <option value="delivery">Delivery Person</option>
+                </select>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <a href="#" onclick="showForgotPasswordForm()" class="forgot-password">Forgot Password?</a>
+                <button type="submit" class="btn">Login</button>
+                <div class="social-icons">
+                    <span>Or continue with:</span>
+                    <div class="icons">
+                        <img src="google.jpg" alt="Google">
+                        <img src="inst.jpg" alt="Twitter">
+                        <img src="git.jpg" alt="GitHub">
+                    </div>
+                </div>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="form">
+                <h2>Signup</h2>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="text" placeholder="Phone Number" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="social-icons">
+                  <span>Or continue with:</span>
+                  <div class="icons">
+                      <img src="google.jpg" alt="Google">
+                      <img src="inst.jpg" alt="Twitter">
+                      <img src="git.jpg" alt="GitHub">
+                  </div>
+              </div>
+            </form>
+
+            <!-- Forgot Password Form -->
+            <form id="forgotPasswordForm" class="form">
+                <h2>Forgot Password</h2>
+                <p>Enter your email to reset your password.</p>
+                <input type="email" placeholder="Email" required>
+                <button type="submit" class="btn">Send Reset Link</button>
+                <a href="#" onclick="showLoginForm()" class="back-link">Back to Login</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navbarLinks = document.querySelector(".navbar-links");
+
+    hamburger.addEventListener("click", function () {
+    if (navbarLinks.style.display === "flex") {
+      navbarLinks.style.display = "none";  // Hide menu
+    } else {
+      navbarLinks.style.display = "flex";  // Show menu
+    }
+    });
+
+     // Navbar close on link click
+    document.querySelectorAll(".navbar-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navbarLinks.style.display = "none";  // Hide menu on link click
+        });
+      });
+    });
+
+
+
+
+        // Menu Toggle
+        function toggleMenu() {
+          const navbarLinks = document.getElementById("navbar-links");
+          navbarLinks.classList.toggle("active");
+        }
+    
+        // Form Switching Functions
+        function showLoginForm() {
+          document.getElementById("loginForm").style.display = "block";
+          document.getElementById("signupForm").style.display = "none";
+          document.getElementById("forgotPasswordForm").style.display = "none";
+        }
+    
+        function showSignupForm() {
+          document.getElementById("loginForm").style.display = "none";
+          document.getElementById("signupForm").style.display = "block";
+          document.getElementById("forgotPasswordForm").style.display = "none";
+        }
+    
+        function showForgotPasswordForm() {
+          document.getElementById("loginForm").style.display = "none";
+          document.getElementById("signupForm").style.display = "none";
+          document.getElementById("forgotPasswordForm").style.display = "block";
+        }
+    
+        // Role-Based Login Redirection
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          const role = document.getElementById("userRole").value;
+          if (role === "donor") {
+            window.location.href = "donor-dashboard.html";
+          }
+           else if (role === "admin") {
+            window.location.href = "admin-dashboard.html";
+          }
+          else if (role === "delivery") {
+            window.location.href = "delivery-person.html";
+          }
+        });
+    
+        // Default View: Show Login Form
+        showLoginForm();
+      </script>
+    
+    
+</body>
+</html>
+
+
+  

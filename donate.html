@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Food</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="select_category.html"><button class="back-btn">←</button></a>
+        <h1>Donate Food</h1>
+    </header>
+
+    <div class="container">
+        <form action="thankyou.html">
+            <!-- Meal Type -->
+            <label>Meal type</label>
+            <div class="meal-type">
+                <label>
+                    <input type="radio" name="mealType" value="veg" checked>
+                    <span>Veg</span>
+                </label>
+                <label>
+                    <input type="radio" name="mealType" value="non-veg">
+                    <span>Non-veg</span>
+                </label>
+            </div>
+
+            <!-- Meal Time -->
+            <div class="meal-time">
+                <label>
+                    <input type="radio" name="mealTime" value="breakfast" checked>
+                    <img src="breakfast.png" alt="Breakfast">
+                    <span>Breakfast</span>
+                </label>
+                <label>
+                    <input type="radio" name="mealTime" value="lunch">
+                    <img src="lunch.png" alt="Lunch">
+                    <span>Lunch</span>
+                </label>
+                <label>
+                    <input type="radio" name="mealTime" value="dinner">
+                    <img src="dinner.png" alt="Dinner">
+                    <span>Dinner</span>
+                </label>
+            </div>
+
+            <!-- Quantity Slider -->
+            <label>Quantity (person)</label>
+            <input type="range" min="0" max="30" step="1" value="0" id="quantityRange">
+            <div class="slider-labels" id="quantityValue">0</div>
+
+            <!-- Meal Preparation Time Slider -->
+            <label>When was the meal prepared (Hrs)</label>
+            <input type="range" min="0" max="30" step="1" value="0" id="prepTimeRange">
+            <div class="slider-labels" id="prepTimeValue">0</div>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Describe the food (e.g., type, special ingredients, etc.)" required></textarea>
+
+            
+            <button type="submit" class="btn"><a href="option.html">Select delivery option</a></button>
+            <!-- Post Button -->
+            <a href="thankyou.html"><button type="submit" class="btn">Post</button></a>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <nav>
+            <a href="donor-dashboard.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="d-activity.html">
+                <i class="fas fa-list"></i>
+                <span>Activity</span>
+            </a>
+            <a href="donate.html">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>Donate</span>
+            </a>
+            
+            <a href="profile.html">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

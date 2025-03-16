@@ -1,0 +1,229 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(234, 232, 232);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff8c00;
+  padding: 1em;
+  color: white;
+}
+
+.brand-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin: auto;
+}
+
+.hamburger {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;  
+    flex-direction: column;
+    background-color: #ff8c00;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 2em auto;
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5em;
+  background-color: #ff8c00;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.forgot-password,
+.back-link {
+  display: block;
+  text-align: right;
+  color: #007bff;
+  font-size: 0.9em;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: flex;
+  }
+}
+
+.navbar-links.active {
+  /*display: block;*/
+  display: flex;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(219, 198, 151);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff8c00;
+  padding: 1em;
+  color: white;
+}
+
+.brand-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.hamburger {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: none;
+  flex-direction: column;
+  background-color: #ff8c00;
+  padding: 1em;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0;
+  margin: 0px 0px 10px 40px;
+}
+a:hover{
+  color:blue;
+}
+
+.container {
+  max-width: 400px;
+  margin: 2em auto;
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 0.5em;
+  border: none;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background-color: #ff8c00;
+  color: white;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+input,select {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5em;
+  background-color: #ff8c00;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.forgot-password,
+.back-link {
+  display: block;
+  text-align: right;
+  color: #007bff;
+  font-size: 0.9em;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+
+.social-icons {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.social-icons .icons img {
+  width: 32px;
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: flex;
+  }
+}

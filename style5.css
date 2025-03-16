@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(234, 232, 232);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    background-color: #ff8c00;
+    color: white;
+}
+
+.header h1 {
+    margin: 0 auto;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.container {
+    padding: 2em 1.5em;
+    background: white;
+    margin: 1em auto;
+    margin-top: 70px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Scooter design */
+.scooter {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    animation: bounce 2s infinite;
+}
+
+/* Body of the scooter */
+.body {
+    position: absolute;
+    background-color: #ff8c00;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    bottom: 30px;
+    left: 20px;
+}
+
+/* Seat of the scooter */
+.seat {
+    position: absolute;
+    background-color: #333;
+    width: 70px;
+    height: 10px;
+    border-radius: 5px;
+    bottom: 70px;
+    left: 40px;
+}
+
+/* Front of the scooter */
+.front {
+    position: absolute;
+    background-color: #ff8c00;
+    width: 30px;
+    height: 50px;
+    border-radius: 20px;
+    bottom: 30px;
+    left: 130px;
+}
+
+/* Wheels */
+.wheel {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    bottom: 0;
+    background-color: white;
+    animation: rotate 1s linear infinite;
+}
+
+.back-wheel {
+    left: 20px;
+}
+
+.front-wheel {
+    left: 140px;
+}
+
+/* Animation for rotating wheels */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation for bouncing the scooter */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Options text */
+.option-text {
+    margin: 2em 0 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Option buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.btn {
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.self-delivery {
+    background-color: #ff8c00;
+    color: white;
+}
+
+.pickup {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #ff8c00;
+    padding: 0.75em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.footer a i {
+    font-size: 1.5em;
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
